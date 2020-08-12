@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <title>Chinese investments in South American soy and beef</title>
-      <meta name="description" content="Chinese investments in South American soy and beef, China Dialogue">
+      <meta name="description" content="Chinese interests in South American Soy and Beef, China Dialogue">
       <meta name="author" content="Julia Janicki">
       <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
       <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -188,6 +188,8 @@
          }
          .mapboxgl-popup-close-button:hover,.mapboxgl-popup-close-button:active,.mapboxgl-popup-close-button:target{
            background:none !important;
+           border: none !important;
+           outline: none!important;
            color:#cfcfcf;
            transition: all 0.5s ease;
          }
@@ -540,7 +542,7 @@
             <span id="toggleConsole">
             <img src="./img/toggle.png" />
             </span>
-            <h1 id='title'><a href="https://dialogochino.net/en/agriculture/36342-mapping-chinese-investments-south-american-soy-and-beef/">Chinese investments in South American soy and beef (2009-2019)</a></h1>
+            <h1 id='title'><a href="https://dialogochino.net/en/agriculture/36342-mapping-chinese-investments-south-american-soy-and-beef/">Chinese interests in South American Soy and Beef (2009-2019)</a></h1>
             <div class="itemWrapper" id="toggleWrapper">
                <div class="item">
                   <h2 id="product"><span id="soyTitle">SOY</span> / <span id="beefTitle">BEEF</span></h2>
@@ -576,7 +578,7 @@
                <select class="custom-dropdown__select custom-dropdown__select--white item" id="dropdown">
                </select>
             </div>
-            <h2 id="chartTitle">Cumulative investment (US$ billions)</h2>
+            <h2 id="chartTitle">Cumulative amount (US$ billions)</h2>
             <div id="chart">
             </div>
             <div class="instruction" id="legendInstruction">
@@ -601,7 +603,7 @@
                  </div>
               </div>
               <div class='row itemWrapper'>
-                 <h2 class=""> Investment </h2>
+                 <h2 class=""> Amount </h2>
                  <div class="">
                     <img id="minCircle" class='item2' src="./img/legend4.svg" /img>
                     <p id="minCircleVal" class='item2'></p>
@@ -1078,7 +1080,7 @@
 
                allYears = getAllYears(firstYear,finalYear);
 
-               $("#title").html(`<a href='https://dialogochino.net/en/agriculture/36342-mapping-chinese-investments-south-american-soy-and-beef/'>Chinese Investments in South American Soy and Beef (${firstYear}-${finalYear})</a>`);
+               $("#title").html(`<a href='https://dialogochino.net/en/agriculture/36342-mapping-chinese-investments-south-american-soy-and-beef/'>Chinese interests in South American Soy and Beef (${firstYear}-${finalYear})</a>`);
 
                // console.log(allDates)
                totalMonths = calculateTotalMonths(firstDate,lastDate);
@@ -1485,15 +1487,6 @@
                  });
 
 
-                //uncomment below to have the axes also update
-                 // Add the X Axis
-               //   chart.selectAll(".Xaxis").transition()
-               //         .duration(50)
-               //         .call(xAxis);
-               // // Add the Y Axis
-               // chart.selectAll(".Yaxis").transition()
-               //       .duration(50)
-               //       .call(yAxis);
            }
 
 
@@ -1601,7 +1594,7 @@
 
                 popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                     .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                    + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                    + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                     + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                     // + '<h4><b>' +local_partner_title+': </b>' + local_partner + '</h4>'
                     + '<h4><b> Project: </b>' + project_description + '</h4>'
@@ -1613,14 +1606,14 @@
 
                 popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                     .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                    + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                    + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                     + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                     // + '<h4><b>' +local_partner_title+': </b>' + local_partner + '</h4>'
                     + '<h4><b> Project: </b>' + project_description + '</h4>'
                     + '<h4><b> Sector:</b> '  + sector + '</h4>'
                     + '<h4><b> Type:</b> '  + project_type + '</h4>'
                     // + '<h4><b> Investment:</b> US$'  + investment + ' million </h4>')
-                    + '<h4><b> Investment:</b> US$'  + investment_w_unit + '</h4>')
+                    + '<h4><b> Amount:</b> US$'  + investment_w_unit + '</h4>')
                     .setLngLat([latitude,longitude])
                     .addTo(map);
 
@@ -1632,7 +1625,7 @@
 
                 popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                     .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                    + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                    + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                     + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                     + '<h4><b> Project: </b>' + project_description + '</h4>'
                     + '<h4><b> Sector:</b> '  + sector + '</h4>'
@@ -1645,13 +1638,13 @@
 
                 popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                     .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                    + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                    + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                     + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                     + '<h4><b> Project: </b>' + project_description + '</h4>'
                     + '<h4><b> Sector:</b> '  + sector + '</h4>'
                     + '<h4><b> Type:</b> '  + project_type + '</h4>'
                     // + '<h4><b> Investment:</b> US$'  + investment + ' million </h4>'
-                    + '<h4><b> Investment:</b> US$'  + investment_w_unit + '</h4>'
+                    + '<h4><b> Amount:</b> US$'  + investment_w_unit + '</h4>'
                     + `<div class="button ${popupClass}"><a target="_blank" href="${url}">Read More</a></div>`)
                     .setLngLat([latitude,longitude])
                     .addTo(map);
@@ -1772,7 +1765,7 @@
 
                popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                    .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                   + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                   + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                    + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                    + '<h4><b> Project: </b>' + project_description + '</h4>'
                    + '<h4><b> Sector:</b> '  + sector + '</h4>'
@@ -1783,13 +1776,13 @@
 
                popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                    .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                   + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                   + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                    + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                    + '<h4><b> Project: </b>' + project_description + '</h4>'
                    + '<h4><b> Sector:</b> '  + sector + '</h4>'
                    + '<h4><b> Type:</b> '  + project_type + '</h4>'
                    // + '<h4><b> Investment:</b> US$'  + investment + ' million </h4>')
-                   + '<h4><b> Investment:</b> US$'  + investment_w_unit + '</h4>')
+                   + '<h4><b> Amount:</b> US$'  + investment_w_unit + '</h4>')
                    .setLngLat([latitude,longitude])
                    .addTo(map);
 
@@ -1800,7 +1793,7 @@
              if(investment==""){
                popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                    .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                   + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                   + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                    + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                    + '<h4><b> Project: </b>' + project_description + '</h4>'
                    + '<h4><b> Sector:</b> '  + sector + '</h4>'
@@ -1811,13 +1804,13 @@
              }else{
                popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true, className:popupClass})
                    .setHTML('<h3 class="popupTitle">' + title + '</h3>'
-                   + '<h4><b> Investing company: </b>' + investing_company + '</h4>'
+                   + '<h4><b> Investor / lender: </b>' + investing_company + '</h4>'
                    + '<h4><b> Local entity: </b>' + local_partner + '</h4>'
                    + '<h4><b> Project: </b>' + project_description + '</h4>'
                    + '<h4><b> Sector:</b> '  + sector + '</h4>'
                    + '<h4><b> Type:</b> '  + project_type + '</h4>'
                    // + '<h4><b> Investment:</b> US$'  + investment + ' million </h4>'
-                   + '<h4><b> Investment:</b> US$'  + investment_w_unit + '</h4>'
+                   + '<h4><b> Amount:</b> US$'  + investment_w_unit + '</h4>'
                    + `<div class="button ${popupClass}"><a target="_blank" href="${url}">Read More</a></div>`)
                    .setLngLat([latitude,longitude])
                    .addTo(map);
